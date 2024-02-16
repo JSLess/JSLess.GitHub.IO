@@ -1,9 +1,10 @@
-import { extract } from "$std/encoding/front_matter.ts";
+import { extract } from "$std/front_matter/any.ts";
 
 export interface Post {
   slug: string;
   title: string;
   publishedAt: Date;
+  updatedAt: Date;
   content: string;
 }
 
@@ -20,10 +21,12 @@ export async function loadPost(slug: string): Promise<Post | null> {
   const { attrs, body } = extract(text);
   const params = attrs as Record<string, string>;
   const publishedAt = new Date(params.published_at);
+  const updatedAt = new Date(params.updated_at);
   return {
     slug,
     title: params.title,
     publishedAt,
+    updatedAt,
     content: body,
   };
 }

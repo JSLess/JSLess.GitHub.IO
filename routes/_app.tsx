@@ -36,6 +36,8 @@ export default function App({ Component }: AppProps) {
         <meta property="twitter:title" content={site.title} />
         <meta property="twitter:description" content={site.description} />
         <meta property="twitter:image" content={site.ogImage} />
+
+        <link rel="stylesheet" href="/styles.css" />
       </Head>
       <div
         class="min-h-screen grid grid-cols-1"

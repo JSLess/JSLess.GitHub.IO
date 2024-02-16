@@ -23,14 +23,41 @@ export default function PostPage(props: PageProps<Data>) {
       <>
         <Header />
         <Container>
-          <h1 class="font-bold text-5xl pt-20">{post.title}</h1>
-          <time class="inline-block mt-4">
+          <h1 class="font-bold text-5xl pt-20 text-balance">
+            {post.title}
+            </h1>
+
+          <div class="inline-block mt-4 flex flex-col" >
+          <span>
+              <b>Published : </b>
+
+              <time>
             {new Date(post.publishedAt).toLocaleDateString("en-us", {
               year: "numeric",
               month: "long",
               day: "numeric",
             })}
           </time>
+              </span>
+          
+          { ( post.updatedAt !== post.publishedAt ) && <>
+            
+              <span>
+              <b>Updated : </b>
+
+              <time>
+{new Date(post.updatedAt).toLocaleDateString("en-us", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </time>
+              </span>
+          
+          </>}
+          </div>
+
+          
           <style dangerouslySetInnerHTML={{ __html: gfm.CSS }} />
           <article
             class="mt-12 markdown-body"
