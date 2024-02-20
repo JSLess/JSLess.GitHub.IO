@@ -65,6 +65,7 @@ To stop this cyclic hell and to get more use out of the
 technique we should consider the complementary event,  
 in this case the user stopping to hover over the element.
 
+<img src = '/CSS%20Sparks.svg'>
 
 
 <!----------------------------------------------------------------------------->
