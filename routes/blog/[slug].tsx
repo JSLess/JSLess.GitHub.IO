@@ -40,7 +40,7 @@ export default function PostPage(props: PageProps<Data>) {
           </time>
               </span>
           
-          { ( post.updatedAt !== post.publishedAt ) && <>
+          { ( post.updatedAt.getMilliseconds() !== post.publishedAt.getMilliseconds() ) && <>
             
               <span>
               <b>Updated : </b>

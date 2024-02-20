@@ -1,5 +1,4 @@
 export const site = {
-  title: 'JSLess Blog',
   description: 'Interactivity without JavaScript',
   // This should be a url to the static file you're using for your open graph image
   ogImage: 'https://fresh-blog.littlesticks.dev/og-image.png',

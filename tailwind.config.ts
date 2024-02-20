@@ -10,7 +10,7 @@ export default {
   setup: {
     theme: {
       colors: {
-        yellow: colors.yellow,
+        yellow: '#84ea9a',
         transparent: 'transparent',
       },
     },
