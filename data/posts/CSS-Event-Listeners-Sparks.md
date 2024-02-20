@@ -1,7 +1,7 @@
 ---
 title: CSS Event Listeners - Sparks
 published_at: 2024-02-20
-updated_at: 2024-02-20
+updated_at: 2024-02-21
 ---
 
 
