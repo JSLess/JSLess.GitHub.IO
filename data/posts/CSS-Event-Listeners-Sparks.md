@@ -7,7 +7,7 @@ updated_at: 2024-02-21
 
 ## TLDR
 
-Using CSS resources loading behavior to observe user interactions.
+Using the loading behavior of CSS resources to observe user interactions.
 
 <br>
 
