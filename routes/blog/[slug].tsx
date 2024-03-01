@@ -16,11 +16,37 @@ export const handler: Handlers<Data> = {
   },
 };
 
+
+import markdownit from 'markdown-it'
+import hljs from 'highlight' // https://highlightjs.org
+
+
+// Actual default values
+const md = markdownit({
+
+  html : true ,
+  xhtmlOut : true ,
+  breaks : true ,
+
+  highlight (str : any, lang : any){ 
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        return hljs.highlight(str, { language: lang }).value;
+      } catch (__) {}
+    }
+
+    return ''; // use external default escaping
+  }
+});
+
 export default function PostPage(props: PageProps<Data>) {
   const { post } = props.data;
   return post
     ? (
       <>
+        <link rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css"
+        />
         <Header />
         <Container>
           <h1 class="font-bold text-5xl pt-20 text-balance">
@@ -61,7 +87,7 @@ export default function PostPage(props: PageProps<Data>) {
           <style dangerouslySetInnerHTML={{ __html: gfm.CSS }} />
           <article
             class="mt-12 markdown-body"
-            dangerouslySetInnerHTML={{ __html: gfm.render(post.content) }}
+            dangerouslySetInnerHTML={{ __html: md.render(post.content) }}
           />
         </Container>
       </>

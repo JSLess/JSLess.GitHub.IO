@@ -7,6 +7,7 @@ export function PostPreview(props: { post: Post }) {
       <a href={`/blog/${post.slug}`} class="py-12 group grid sm:grid-cols-3">
         <time>
           {new Date(post.publishedAt).toLocaleDateString("en-us", {
+            timeZone : 'UTC' ,
             year: "numeric",
             month: "long",
             day: "numeric",
