@@ -10,10 +10,9 @@
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.0.1" ,
     "markdown-it" : "npm:markdown-it@14.0.0" ,
     "highlight" : "npm:highlight.js@11.9.0" ,
-    "Languages" : "https://esm.sh/highlight.js@11.9.0/lib/languages/index.js" ,
     "tailwindcss": "npm:tailwindcss@3.4.1",
-   "tailwindcss/" : "npm:tailwindcss@3.4.1/",
-   "tailwindcss/plugin" : "npm:tailwindcss@3.4.1/plugin.js" ,
-   "tailwindcss/colors" : "npm:tailwindcss@3.4.1/colors.js"
+    "tailwindcss/" : "npm:tailwindcss@3.4.1/",
+    "tailwindcss/plugin" : "npm:tailwindcss@3.4.1/plugin.js" ,
+    "tailwindcss/colors" : "npm:tailwindcss@3.4.1/colors.js"
   }
 }
